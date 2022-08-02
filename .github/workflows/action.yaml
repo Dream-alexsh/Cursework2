@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build_and_push
     steps:
-      - name: clone code
+      - name: clone code 2
         uses: actions/checkout@v2
       - name: copy on server
         uses: appleboy/scp-action@master
@@ -24,6 +24,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          source: "Cursework2/docker-compose.yaml"
+          source: "Cursework2/docker-compose-ci.yaml"
           target: "flask_app_ci"
           strip_components: 1
