@@ -24,6 +24,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          source: "Cursework2/docker-compose-ci.yaml"
+          source: "Cursework2/docker-compose.yaml,Cursework2/docker-compose-ci.yaml"
           target: "flask_app_ci"
           strip_components: 1
