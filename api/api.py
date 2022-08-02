@@ -14,12 +14,3 @@ def get_json():
 def get_json_post(post_id):
     data = get_post_by_pk(post_id)
     return jsonify(data)
-
-
-# @api_blueprint.route('/api/posts/<int:post_id>')
-# def get_json_post(post_id):
-#     data = get_post_by_pk(post_id)
-#     try:
-#         return jsonify(data)
-#     except 'null':
-#         return 'Пост не найден'
